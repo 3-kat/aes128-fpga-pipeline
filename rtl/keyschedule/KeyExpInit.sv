@@ -38,7 +38,7 @@ output [3:0] oKeyIterDivNk
     wire [32*`Nb-1:0] outkey[0:2];
  
       KeyExp1Enc keyep0(.iClk(iClk),.iReset(iReset),.iKeyIter(4'b0000),.iKeyIterModNk(4'b0000),.iNkKeys(iNkKeys),
-               .iKeyIterDivNk(4'b0000),.oKeyIter(keyiter[0]),.oKeyIterModNk(keyitermod[0]),.oNkKeys(outkey[0]),.oKeyIterDivNk(keyiterdiv[0]));
+               .iKeyIterDivNk(4'b0001),.oKeyIter(keyiter[0]),.oKeyIterModNk(keyitermod[0]),.oNkKeys(outkey[0]),.oKeyIterDivNk(keyiterdiv[0]));
       
       KeyExp1Enc keyep1(.iClk(iClk),.iReset(iReset),.iKeyIter(keyiter[0]),.iKeyIterModNk(keyitermod[0]),.iNkKeys(outkey[0]),
                .iKeyIterDivNk(keyiterdiv[0]),.oKeyIter(keyiter[1]),.oKeyIterModNk(keyitermod[1]),.oNkKeys(outkey[1]),.oKeyIterDivNk(keyiterdiv[1]));
